@@ -1,14 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body, html {
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-h1 {
-    font-size: 2rem;
+.navbar {
+    background-color: navy;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 20px; /* Adds horizontal spacing between menu items */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
