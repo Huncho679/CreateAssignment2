@@ -1,35 +1,68 @@
-body, html {
+/* Basic reset for styling */
+html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
+/* Navbar base style */
 .navbar {
-    background-color: navy;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center; /* Centers items vertically */
-    justify-content: center; /* Centers items horizontally */
-}
-
-.navbar ul {
-    list-style: none;
+    background-color: navy; 
+    color: white;
     padding: 0;
     margin: 0;
-    display: flex;
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: navy;
 }
 
 .navbar li {
-    margin: 0 20px; /* Adds horizontal spacing between menu items */
+    float: left;
 }
 
-.navbar a {
+.navbar li a, .dropbtn {
+    display: inline-block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+/* Dropdown content. Hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(68 68 141);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Change dropdown button on hover */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
