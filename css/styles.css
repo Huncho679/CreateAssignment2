@@ -120,3 +120,57 @@ html, body {
     color: #333; /* Dark grey color for better visibility */
 }
 
+.games-container {
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    flex-wrap: wrap; /* Allows children to wrap onto the next line */
+    padding: 20px; /* Provides some padding around the container */
+    margin-top: 20px; /* Adds space between the navbar and games */
+}
+
+/* Style for each individual game */
+.game {
+    margin: 15px; 
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-card {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin: 10px; /* Reduced margin */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px; /* Reduced width */
+    height: auto; /* Auto height for flexibility */
+}
+
+.game-card img {
+    width: 100%; /* Images will scale with the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.game-info {
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+}
+
+.game-info h3 {
+    margin-top: 0;
+    font-size: 16px; /* Adjust font size if necessary */
+}
+
+.game-info p {
+    color: #666;
+    font-size: 14px; /* Adjust font size for smaller cards */
+}
