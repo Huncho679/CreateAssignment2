@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Help Me Decide Games</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -22,5 +22,41 @@
     </div>
     <h1>Welcome to the "Help Me Decide" Games page</h1>
     <h4>The games on this page will help you make decisions if you're in a pinch.</h4>
+
+    <!-- Game Thumbnails -->
+    <div class="game" onclick="showCoinTossPopup()">
+        <img src="./images/coin.webp" alt="Coin Toss">
+        <p>Coin Toss</p>
+    </div>
+    <div class="game" onclick="showDiceRollPopup()">
+        <img src="path_to_dice_image.jpg" alt="Dice Roll">
+    </div>
+    <div class="game" onclick="showRPSPopup()">
+        <img src="path_to_rps_image.jpg" alt="Rock Paper Scissors">
+    </div>
+
+    <!-- Popups for Games (initially hidden) -->
+    <div id="coinPopup" class="popup">
+        <button onclick="closePopup('coinPopup')">Close</button>
+        <input type="number" id="numCoins" min="1" max="5" placeholder="Enter number of coins to toss (1-5)">
+        <button onclick="tossCoins()">Toss Coins</button>
+        <p id="coinTossResult"></p>
+    </div>
+
+    <div id="dicePopup" class="popup">
+        <button onclick="closePopup('dicePopup')">Close</button>
+        <button onclick="rollDice()">Roll Dice</button>
+        <p id="diceRollResult"></p>
+    </div>
+
+    <div id="rpsPopup" class="popup">
+        <button onclick="closePopup('rpsPopup')">Close</button>
+        <button onclick="playRPS('rock')">Rock</button>
+        <button onclick="playRPS('paper')">Paper</button>
+        <button onclick="playRPS('scissors')">Scissors</button>
+        <p id="rpsResult"></p>
+    </div>
+
+    <script src="./js/games.js"></script>
 </body>
 </html>
