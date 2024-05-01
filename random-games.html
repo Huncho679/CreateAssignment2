@@ -29,7 +29,8 @@
         <p>Coin Toss</p>
     </div>
     <div class="game" onclick="showDiceRollPopup()">
-        <img src="path_to_dice_image.jpg" alt="Dice Roll">
+        <img src="./images/rolling-dice.jpg" alt="Dice Roll">
+        <p>Dice Roll</p>
     </div>
     <div class="game" onclick="showRPSPopup()">
         <img src="path_to_rps_image.jpg" alt="Rock Paper Scissors">
@@ -45,8 +46,9 @@
 
     <div id="dicePopup" class="popup">
         <button onclick="closePopup('dicePopup')">Close</button>
+        <input type="number" id="numDice" min="1" max="5" placeholder="Enter number of dice to roll (1-5)">
         <button onclick="rollDice()">Roll Dice</button>
-        <p id="diceRollResult"></p>
+        <div id="diceRollResult"></div>
     </div>
 
     <div id="rpsPopup" class="popup">

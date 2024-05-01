@@ -31,3 +31,28 @@ function tossCoins() {
     }
     document.getElementById('coinTossResult').innerText = 'Results: ' + results.join(' ');
 }
+
+function rollDice() {
+    let numberOfDice = document.getElementById('numDice').value;
+    numberOfDice = parseInt(numberOfDice, 10); // Ensure input is a number
+
+    if (isNaN(numberOfDice) || numberOfDice < 1 || numberOfDice > 5) {
+        document.getElementById('diceRollResult').innerText = 'Please enter a valid number of dice (1-5).';
+        return;
+    }
+
+    // Clear previous results
+    const resultContainer = document.getElementById('diceRollResult');
+    resultContainer.innerHTML = '';
+
+    // Generate results and corresponding images
+    for (let i = 0; i < numberOfDice; i++) {
+        const result = Math.floor(Math.random() * 6) + 1;
+        const diceImg = document.createElement('img');
+        diceImg.src = `./images/dice${result}.png`;
+        diceImg.alt = `Dice showing ${result}`;
+        diceImg.style.width = '50px'; // Set the image size as needed
+        resultContainer.appendChild(diceImg);
+    }
+}
+

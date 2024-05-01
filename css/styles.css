@@ -88,3 +88,8 @@ html, body {
 .popup.show {
     display: block;
 }
+
+#diceRollResult img {
+    margin: 5px;
+    vertical-align: middle;  
+}
