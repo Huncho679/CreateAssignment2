@@ -24,24 +24,27 @@
     <h4>The games on this page will help you make decisions if you're in a pinch.</h4>
 
     <!-- Game Thumbnails -->
-    <div class="game" onclick="showCoinTossPopup()">
-        <img src="./images/coin.webp" alt="Coin Toss">
-        <p>Coin Toss</p>
-    </div>
-    <div class="game" onclick="showDiceRollPopup()">
-        <img src="./images/rolling-dice.jpg" alt="Dice Roll">
-        <p>Dice Roll</p>
-    </div>
-    <div class="game" onclick="showRPSPopup()">
-        <img src="path_to_rps_image.jpg" alt="Rock Paper Scissors">
-    </div>
+    <div class="games-container">
+        <div class="game" onclick="showCoinTossPopup()">
+            <img src="./images/coin.webp" alt="Coin Toss">
+            <p>Coin Toss - up to 5 coins!</p>
+        </div>
+        <div class="game" onclick="showDiceRollPopup()">
+            <img src="./images/rolling-dice.jpg" alt="Dice Roll">
+            <p>Dice Roll - up to 5 die!</p>
+        </div>
+        <div class="game" onclick="showRPSPopup()">
+            <img src="./images/rps.jpg" alt="Rock Paper Scissors">
+            <p>Rock Paper Scissors</p>
+        </div>
+   </div>
 
     <!-- Popups for Games (initially hidden) -->
     <div id="coinPopup" class="popup">
         <button onclick="closePopup('coinPopup')">Close</button>
         <input type="number" id="numCoins" min="1" max="5" placeholder="Enter number of coins to toss (1-5)">
         <button onclick="tossCoins()">Toss Coins</button>
-        <p id="coinTossResult"></p>
+        <div id="coinTossResult"></div> 
     </div>
 
     <div id="dicePopup" class="popup">
@@ -50,14 +53,32 @@
         <button onclick="rollDice()">Roll Dice</button>
         <div id="diceRollResult"></div>
     </div>
-
+    
     <div id="rpsPopup" class="popup">
         <button onclick="closePopup('rpsPopup')">Close</button>
-        <button onclick="playRPS('rock')">Rock</button>
-        <button onclick="playRPS('paper')">Paper</button>
-        <button onclick="playRPS('scissors')">Scissors</button>
-        <p id="rpsResult"></p>
+        
+        <div>
+            <label for="gameMode">Choose game mode:</label>
+            <select id="gameMode">
+                <option value="bestOf3">Best of 3 (First to 2 wins)</option>
+                <option value="bestTo3">Best to 3 (First to 3 wins)</option>
+            </select>
+        </div>
+    
+        <button onclick="playRPSGame()">Play!</button>
+        
+        <div id="rpsResult">
+            <div>
+                <p>Player 1's Choice: <img id="player1Choice" src="" alt=""></p>
+                <p>Player 2's Choice: <img id="player2Choice" src="" alt=""></p>
+            </div>
+            <div>
+                <p>Player 1 Score: <span id="player1Score">0</span></p>
+                <p>Player 2 Score: <span id="player2Score">0</span></p>
+            </div>
+        </div>
     </div>
+    
 
     <script src="./js/games.js"></script>
 </body>

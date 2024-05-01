@@ -93,3 +93,30 @@ html, body {
     margin: 5px;
     vertical-align: middle;  
 }
+
+#coinTossResult img {
+    margin: 5px;
+    vertical-align: middle;  
+}
+
+/* Styles for Rock, Paper, Scissors game images */
+#rpsResult img {
+    width: 100px; /* Adjust this value to fit your design */
+    height: auto; /* Maintains the aspect ratio of the images */
+    margin: 10px; /* Adds space around the images */
+    border-radius: 5px; /* Optional: Adds rounded corners to the images */
+}
+
+/* Styling for the result area to ensure it's centered and looks neat */
+#rpsResult div {
+    text-align: center; /* Center-align the contents */
+    margin-top: 20px; /* Adds some space above the result area */
+}
+
+/* Ensure the text is also centered and easy to read */
+#rpsResult p {
+    text-align: center;
+    font-size: 1.2em; /* Makes the text slightly larger for readability */
+    color: #333; /* Dark grey color for better visibility */
+}
+
