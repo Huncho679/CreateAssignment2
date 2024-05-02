@@ -23,14 +23,24 @@
     <h1>Welcome to the Advanced Game section.</h1>
     <h4>Look no further for some challenging games!</h4>
 
-    <div class="game-card" onclick="showSudokuPopup()">
-        <img src="./images/sudoku-cover.png" alt="Sudoku">
-        <div class="game-info">
-            <h3>Sudoku</h3>
-            <p>Test Your Number Skills!</p>
+    <div class='flex'>
+        <div class="game-card" onclick="showSudokuPopup()">
+            <img src="./images/sudoku-cover.png" alt="Sudoku">
+            <div class="game-info">
+                <h3>Sudoku</h3>
+                <p>Test Your Number Skills!</p>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="showMinesweeperPopup()">
+            <img src="./images/minesweeper.png" alt="Minesweeper">
+            <div class="game-info">
+                <h3>Minesweeper</h3>
+                <p>Navigate the minefield with strategy and logic in Minesweeper!</p>
+            </div>
         </div>
     </div>
-
+    
     <div id="sudokuPopup" class="popup">
         <div class="popup-content">
             <div id="sudoku-container">
@@ -42,10 +52,46 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+
+    <div class="container" id="minesweeperPopup">
+        <h1>MINESWEEPER</h1>
+        <div class="minesweeper">
+          <header>
+            <div class="digital">
+              <img id="mines_a" />
+              <img id="mines_b" />
+              <img id="mines_c" />
+            </div>
+  
+            <div class="game_button">
+              <img class="tile face smile" id="game_button" />
+            </div>
+  
+            <div class="digital">
+              <img id="timer_a" />
+              <img id="timer_b" />
+              <img id="timer_c" />
+            </div>
+          </header>
+  
+          <div id="grid"></div>
+        </div>
+        <div class="options">
+          <label>Columns<input type="number" id="cols" value=11></label>
+          <label>Rows<input type="number" id="rows" value=11></label>
+          <label>Mines<input type="number" id="mines" value=15></label>
+        </div>
+        <a href="http://sergiosoriano.com" target="_blank"><script>document.write(new Date().getFullYear())</script> Sergio Soriano</a>
+        
+        <div class="button-group">
+            <button onclick="closeMinesweeperPopup()" class="close-button">Close</button>
+        </div>
+    </div>
     
     <script src="./js/script.js"></script>
     <script src="./js/sudoku.js"></script>
+    <script src="./js/minesweeper.js"></script>
 
 </body>
 </html>
