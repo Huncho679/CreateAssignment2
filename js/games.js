@@ -142,3 +142,4 @@ function resetGame() {
     document.getElementById('player1Score').textContent = '0';
     document.getElementById('player2Score').textContent = '0';
 }
+

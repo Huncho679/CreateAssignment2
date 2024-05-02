@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/advanced-styles.css">
 </head>
 <body>
     <div class="navbar">
@@ -22,5 +22,30 @@
     </div>
     <h1>Welcome to the Advanced Game section.</h1>
     <h4>Look no further for some challenging games!</h4>
+
+    <div class="game-card" onclick="showSudokuPopup()">
+        <img src="./images/sudoku-cover.png" alt="Sudoku">
+        <div class="game-info">
+            <h3>Sudoku</h3>
+            <p>Test Your Number Skills!</p>
+        </div>
+    </div>
+
+    <div id="sudokuPopup" class="popup">
+        <div class="popup-content">
+            <div id="sudoku-container">
+                <h1>Sudoku Puzzle</h1>
+                <div id="sudoku-board"></div>
+                <div class="button-group">
+                    <button id="new-game">New Game</button>
+                    <button onclick="closePopup('sudokuPopup')" class="close-button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    <script src="./js/script.js"></script>
+    <script src="./js/sudoku.js"></script>
+
 </body>
 </html>

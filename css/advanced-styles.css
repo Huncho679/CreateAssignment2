@@ -1,0 +1,175 @@
+/* Basic reset for styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar base style */
+.navbar {
+    background-color: navy; 
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: navy;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Dropdown content styling, hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(68, 68, 141);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style for dropdown links and hover effects */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 1px;
+    background-color: #000;
+    padding: 4px;
+    width: 360px;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  .cell.filled {
+    color: #000;
+  }
+  
+  .cell.empty {
+    color: #888;
+  }
+
+  .game-card {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;  /* Adjust size as necessary */
+    height: auto; /* Adjust height as necessary */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-info {
+    padding: 10px;
+    text-align: center;
+}
+
+/* General styling for popups */
+.popup {
+    display: none; /* Hide the popup by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    width: auto; /* Adjust based on content or set a fixed width */
+    height: auto; /* Adjust based on content or set a fixed height */
+    background-color: white; /* Background color of the popup */
+    padding: 20px; /* Padding inside the popup */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Drop shadow for 3D effect */
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+/* Showing the popup when needed */
+.popup.show {
+    display: flex; /* Change to 'flex' to use Flexbox for positioning internal elements */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+/* Button group styling for popup actions */
+.button-group button {
+    flex-grow: 1;
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+/* Styling for interactive elements in popups */
+.popup button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
+.game-card img {
+    width: 100%;  /* Makes the image fill the width of the card */
+    height: auto; /* Keeps the image aspect ratio intact */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+    border-top-left-radius: 8px; /* Rounds the top corners to match the card */
+    border-top-right-radius: 8px;
+    display: block; /* Removes any extra space below the image */
+}
+
+
