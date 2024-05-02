@@ -132,7 +132,7 @@ function checkForWinner() {
         setTimeout(function() {
             alert(`${winner} wins the game!`);
             resetGame();
-        }, 1000); 
+        }, 800); 
     }
 }
 

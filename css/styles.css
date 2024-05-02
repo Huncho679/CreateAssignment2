@@ -34,16 +34,17 @@ html, body {
     text-decoration: none;
 }
 
-/* Dropdown content. Hidden by default */
+/* Dropdown content styling, hidden by default */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(68 68 141);
+    background-color: rgba(68, 68, 141);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
+/* Style for dropdown links and hover effects */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -52,26 +53,25 @@ html, body {
     text-align: left;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Style dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* Change dropdown button on hover */
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
 
+/* Game image styling */
 .game img {
-    width: 100px; /* Adjust size as necessary */
+    width: 100px; /* Adjustable size */
     cursor: pointer;
 }
 
+/* Popup visibility and positioning */
 .popup {
     display: none;
     position: fixed;
@@ -84,93 +84,139 @@ html, body {
     z-index: 1000;
 }
 
-/* To display the popup */
+/* Popup show class */
 .popup.show {
     display: block;
 }
 
-#diceRollResult img {
+/* Dice and coin result image styling */
+#diceRollResult img, #coinTossResult img {
     margin: 5px;
     vertical-align: middle;  
 }
 
-#coinTossResult img {
-    margin: 5px;
-    vertical-align: middle;  
-}
-
-/* Styles for Rock, Paper, Scissors game images */
+/* Rock, Paper, Scissors game image styling */
 #rpsResult img {
-    width: 100px; /* Adjust this value to fit your design */
-    height: auto; /* Maintains the aspect ratio of the images */
-    margin: 10px; /* Adds space around the images */
-    border-radius: 5px; /* Optional: Adds rounded corners to the images */
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
 }
 
-/* Styling for the result area to ensure it's centered and looks neat */
+/* Centered text and spacing for results */
 #rpsResult div {
-    text-align: center; /* Center-align the contents */
-    margin-top: 20px; /* Adds some space above the result area */
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Ensure the text is also centered and easy to read */
 #rpsResult p {
     text-align: center;
-    font-size: 1.2em; /* Makes the text slightly larger for readability */
-    color: #333; /* Dark grey color for better visibility */
+    font-size: 1.2em;
+    color: #333;
 }
 
+/* Flex container for game cards */
 .games-container {
     display: flex;
-    justify-content: center; /* Centers children horizontally */
-    align-items: center; /* Centers children vertically */
-    flex-wrap: wrap; /* Allows children to wrap onto the next line */
-    padding: 20px; /* Provides some padding around the container */
-    margin-top: 20px; /* Adds space between the navbar and games */
-}
-
-/* Style for each individual game */
-.game {
-    margin: 15px; 
-}
-
-.games-container {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
+    margin-top: 20px;
 }
 
+/* Individual game card styling */
 .game-card {
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 8px;
-    margin: 10px; /* Reduced margin */
+    margin: 10px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px; /* Reduced width */
-    height: auto; /* Auto height for flexibility */
+    width: 200px;
+    height: auto;
 }
 
 .game-card img {
-    width: 100%; /* Images will scale with the card */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     display: block;
 }
 
+/* Styling for text within the game card */
 .game-info {
-    padding: 10px; /* Reduced padding */
+    padding: 10px;
     text-align: center;
 }
 
 .game-info h3 {
     margin-top: 0;
-    font-size: 16px; /* Adjust font size if necessary */
+    font-size: 16px;
 }
 
 .game-info p {
     color: #666;
-    font-size: 14px; /* Adjust font size for smaller cards */
+    font-size: 14px;
+}
+
+/* Button group styling for popup actions */
+.button-group button {
+    flex-grow: 1;
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+/* Styling for interactive elements in popups */
+.popup button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
+.popup input[type="number"], .popup select {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.popup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#rpsResult > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#rpsResult img {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
 }
