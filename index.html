@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Navbar</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/games.js"></script>
+    <script src="./js/minesweeper.js"></script>
+    <script src="./js/sudoku.js"></script>
 </head>
 <body class="bg">
     <div class="navbar">
@@ -20,6 +23,15 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </div>
-    <h1>This is the Home/Welcome page</h1>
+    <h1>Welcome to our Online Arcade!</h1> 
+    <br>
+    <div class="home-description">
+        <h4>Check out some of our games by clicking below.</h4>
+    </div> 
+    
+    <div class="home-content">
+        <button onclick="window.location.href='advanced-games.html'" class="home-button">Advanced Games</button>
+        <button onclick="window.location.href='random-games.html'">Random Games</button>
+    </div>  
 </body>
 </html>

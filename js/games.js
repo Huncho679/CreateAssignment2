@@ -11,18 +11,22 @@ function closeAllPopups() {
 // Modified function to show coin toss popup
 function showCoinTossPopup() {
     closeAllPopups(); // Close any open popups first
+    console.log(document.getElementById('dicePopup'));
     document.getElementById('coinPopup').classList.add('show');
 }
 
 // Modified function to show dice roll popup
 function showDiceRollPopup() {
     closeAllPopups(); // Close any open popups first
+    console.log("dice roll called");
+    console.log(document.getElementById('dicePopup'));
     document.getElementById('dicePopup').classList.add('show');
 }
 
 // Modified function to show rock paper scissors popup
 function showRPSPopup() {
     closeAllPopups(); // Close any open popups first
+    console.log(document.getElementById('dicePopup'));
     document.getElementById('rpsPopup').classList.add('show');
 }
 
