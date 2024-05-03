@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
 .bg {
     background-image: url("/images/tortoise-shell.svg");
 }
