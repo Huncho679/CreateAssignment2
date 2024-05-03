@@ -176,6 +176,18 @@ html, body {
     display: flex;
 }
 
+.bg {
+    background-image: url("/images/tortoise-shell.svg");
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
 /* MINESWEEPER STYLING BELOW (comes from minesweeper.css) */
 
 .container {
